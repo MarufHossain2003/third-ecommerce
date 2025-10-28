@@ -135,8 +135,8 @@
     <div class="footer__bottom-wrapper">
         <div class="container">
             <p class="footer__bottom-text">
-                © 2024, All rights reserved
-                <strong class="text-brand">Nitto Mart</strong>
+                © 2025, All rights reserved
+                <strong class="text-brand">newmultimediabd.com</strong>
             </p>
         </div>
     </div>

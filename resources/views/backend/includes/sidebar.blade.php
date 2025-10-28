@@ -2,9 +2,9 @@
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
       <!-- Brand Logo -->
       <a href="{{ url('/admin/dashboard') }}" class="brand-link">
-          <img src="{{ asset('backend/dist/img/AdminLTELogo.png') }}" alt="Admin Logo"
-              class="brand-image img-circle elevation-3" style="opacity: .8">
-          <span class="brand-text font-weight-light">Admin Dashboard</span>
+          <img src="{{ asset('backend/images/settings/LOGO New Multimidia copy 02.png') }}" alt="Admin Logo"
+              class="brand-image elevation-3" style="opacity: .8">
+          <span class="brand-text font-weight-light" style="color:aqua"><strong>New Multimedia</strong></span>
       </a>
 
       <!-- Sidebar -->
