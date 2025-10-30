@@ -33,15 +33,16 @@ Route::get('/product-subcategory',            [HomeController::class, 'productSu
 
 
 // add to cart route
-
 Route::post('/product/addtocart-details/{id}', [HomeController::class, 'addtoCartDetails']);
 Route::get('/product/addtocart/{id}',          [HomeController::class, 'addtoCart']);
 Route::get('/product/addtocart/delete/{id}',   [HomeController::class, 'deleteAddtoCart']);
 
 // Make Order
-
 Route::post('/confirm-order',                   [HomeController::class, 'confirmOrder']);
 Route::get('/order-confirmed/{invoiceId}',      [HomeController::class, 'thankyouMessage']);
+
+// return product
+Route::post('/return-product',                  [HomeController::class, 'returnProduct']);
 
 // Category Product
 Route::get('category-products/{slug}',          [HomeController::class, 'categoryProduct']);
@@ -109,9 +110,9 @@ Route::get('/admin/privacy-policy',                [SettingController::class, 's
 Route::post('/admin/privacy-policy/update',        [SettingController::class, 'updatePrivacyPolicy']);
 
 // Authentication
-Route::get('/admin/logout',                 [SettingController::class, 'adminLogout']);
-Route::get('/admin/credentials',            [SettingController::class, 'adminCredentials']);
-Route::post('/admin/credentials/update',    [SettingController::class, 'adminCredentialsUpdate']);
+Route::get('/admin/logout',                         [SettingController::class, 'adminLogout']);
+Route::get('/admin/credentials',                    [SettingController::class, 'adminCredentials']);
+Route::post('/admin/credentials/update',            [SettingController::class, 'adminCredentialsUpdate']);
 
 // Emloyee
 Route::get('/admin/employee-list',              [AdminController::class, 'employeeList']);

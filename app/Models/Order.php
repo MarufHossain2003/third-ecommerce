@@ -15,6 +15,11 @@ class Order extends Model
     {
         return $this->hasMany(OrderDetails::class, 'order_id', 'id' )->with('product');
     }
+
+    public function returnProducts()
+    {
+        return $this->hasMany(ReturnProduct::class, 'order_id', 'id')->with('order');
+    }
 }
 
 // order has many OrderDetails

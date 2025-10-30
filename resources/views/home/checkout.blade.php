@@ -29,13 +29,13 @@
                                         <div style="background: lightgrey;padding: 10px;margin-bottom: 10px;">
                                             <input type="radio" id="inside_dhaka" name="area" value="80" onclick="grandTotalIn()"/>
                                             <label for="inside_dhaka"
-                                                style="font-size: 18px;font-weight: 600;color: #000;">Inside Dhaka (80
+                                                style="font-size: 18px;font-weight: 600;color: #000;">Inside Tangail (80
                                                 Tk.)</label>
                                         </div>
                                         <div style="background: lightgrey;padding: 10px;">
                                             <input type="radio" id="outside_dhaka" name="area" value="150" onclick="grandTotalOut()"/>
                                             <label for="outside_dhaka"
-                                                style="font-size: 18px;font-weight: 600;color: #000;">Outside Dhaka (150
+                                                style="font-size: 18px;font-weight: 600;color: #000;">Outside Tangail (150
                                                 Tk.)</label>
                                         </div>
                                     </div>
