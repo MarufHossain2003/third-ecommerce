@@ -127,6 +127,11 @@
                             </a>
                         </li>
                         <li class="dynamic-page-list-item">
+                            <a href="{{url('/computer-courses')}}" class="dynamic-page-list-item-link float-rigth ">
+                                Computer-Courses
+                            </a>
+                        </li>
+                        <li class="dynamic-page-list-item">
                             <a href="{{url('/shop')}}" class="dynamic-page-list-item-link">
                                 Shop
                             </a>

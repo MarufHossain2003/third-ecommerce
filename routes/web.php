@@ -30,6 +30,7 @@ Route::get('/product-details/{slug}',         [HomeController::class, 'productDe
 Route::get('/privacy-policy',                 [HomeController::class, 'privacyPolicy']);
 Route::get('/product-category',               [HomeController::class, 'productCategory']);
 Route::get('/product-subcategory',            [HomeController::class, 'productSubCategory']);
+Route::get('/computer-courses',               [HomeController::class, 'computerCourses']);
 
 
 // add to cart route

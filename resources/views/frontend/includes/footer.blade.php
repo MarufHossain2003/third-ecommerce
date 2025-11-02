@@ -49,7 +49,7 @@
                                     Address:                                   
                                 </p>
                                 <p class="footer__contact-info-list-item-value">
-                                    {!!$frontendSettings->address!!}                              
+                                    {{$frontendSettings->address}}                              
                                 </p>
                             </li>
                             <li class="footer__contact-info-list-item">
@@ -57,7 +57,7 @@
                                     Phone:                                   
                                 </p>
                                 <a href="tel:0123456857" class="footer__contact-info-list-item-value">
-                                    {!!$frontendSettings->phone!!}
+                                    {{$frontendSettings->phone}}
                                 </a>
                             </li>
                             <li class="footer__contact-info-list-item">
@@ -65,7 +65,7 @@
                                     Email:                                   
                                 </p>
                                 <a href="mailto:info@gmail.com" class="footer__contact-info-list-item-value">
-                                    {!!$frontendSettings->email!!}
+                                    {{$frontendSettings->email}}
                                 </a>
                             </li>
                         </ul>

@@ -81,6 +81,10 @@ class HomeController extends Controller
         return view('home.product-subcategory');
     }
 
+    public function computerCourses()
+    {
+        return view('home.computer-courses');
+    }
     // add to cart
     public function addtoCartDetails(Request $request, $id)
     {

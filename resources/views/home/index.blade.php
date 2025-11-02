@@ -5,11 +5,10 @@
     <section class="home-slider-section">
         <div class="container">
             <div class="home__slider-sec-wrap">
-                <div class="home__category-outer">
+                {{-- <div class="home__category-outer">
                     <ul class="header__category-list">
                         @foreach ($allCategories as $category)
                             <li class="header__category-list-item item-has-submenu">
-
                                 <a href="{{ url('category-products/'.$category->slug) }}" class="header__category-list-item-link">
                                     <img src="{{ asset('backend/images/category/' . $category->image) }}" alt="category">
                                     {{ $category->name }}
@@ -24,13 +23,12 @@
                                         </a>
                                         </li>  
                                     @endforeach
-                                    
                                 </ul>
                             </li>
                         @endforeach
                     </ul>
-                </div>
-                <div class="home__slider-items-wrapper">
+                </div> --}}
+                <div class="home__slider-items-wrapper  w-100">
                     <div class="home__slider-item-outer">
                         <img src="{{ asset('backend/images/settings/'.$homeBanner->banner) }}" alt="image"
                             class="home__slider-item-image">
@@ -94,7 +92,7 @@
                 <h1 class="title">
                     Hot Products
                 </h1>
-                <a href="type-products.html" class="product-view-all-btn">
+                <a href="{{url('/shop')}}" class="product-view-all-btn">
                     View All
                 </a>
             </div>
@@ -144,7 +142,7 @@
                 <h1 class="title">
                     New Arrival
                 </h1>
-                <a href="type-products.html" class="product-view-all-btn">
+                <a href="{{url('/shop')}}" class="product-view-all-btn">
                     View All
                 </a>
             </div>
@@ -194,7 +192,7 @@
                 <h1 class="title">
                     Regular Products
                 </h1>
-                <a href="type-products.html" class="product-view-all-btn">
+                <a href="{{url('/shop')}}" class="product-view-all-btn">
                     View All
                 </a>
             </div>
@@ -244,7 +242,7 @@
                 <h1 class="title">
                     Discount Products
                 </h1>
-                <a href="type-products.html" class="product-view-all-btn">
+                <a href="{{url('/shop')}}" class="product-view-all-btn">
                     View All
                 </a>
             </div>
