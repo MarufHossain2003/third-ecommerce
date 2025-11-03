@@ -34,9 +34,14 @@
 
                                 <div class="form-group">
                                     <label for="address">Address</label>
-                                    <input type="address" class="form-control" id="address" name="address" value="{{ $settings->address }}" placeholder="Enter address" required>
-                                    {{-- <textarea name="address" id="summernote">{{$settings->address}}</textarea> --}}
+                                    <input type="text" class="form-control" id="address" name="address" value="{{ $settings->address }}" placeholder="Enter address" required>
                                 </div>
+
+                                <div class="form-group">
+                                    <label for="notice">Notice Enrole</label>
+                                    <input type="text" class="form-control" id="notice" name="notice" value="{{ $settings->notice }}" placeholder="Enter notice" required>
+                                </div>
+
                                 <div class="form-group">
                                     <label for="facebook">Facebook Link (optional)</label>
                                     <input type="text" name="facebook" class="form-control" value="{{$settings->facebook}}" id="facebook"
@@ -66,7 +71,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="logo">Logo</label>
-                                    <div class="input-group">
+                                    <div class="input-group mb-3">
                                         <div class="custom-file">
                                             <input type="file" name="logo" class="custom-file-input"
                                                 id="logo" accept="image/*" rewuired>

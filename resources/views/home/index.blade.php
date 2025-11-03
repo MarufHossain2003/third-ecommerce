@@ -38,7 +38,13 @@
         </div>
     </section>
     <!-- /Home Slider -->
-
+        <section class="notice-section mt-3">
+        <div class="bg-warning container">
+            <div class="notice_text_wrap">
+                <marquee direction="left">{{$frontendSettings->notice}}</marquee>
+            </div>
+        </div>
+    </section>
     <!-- Categoris Slider -->
     <section class="categoris-slider-section">
         <div class="container">

@@ -39,6 +39,7 @@ class SettingController extends Controller
                 $settings->phone = $request->phone;
                 $settings->email = $request->email;
                 $settings->address = $request->address;
+                $settings->notice = $request->notice;
                 $settings->facebook = $request->facebook;
                 $settings->twiter = $request->twiter;
                 $settings->instagram = $request->instagram;
