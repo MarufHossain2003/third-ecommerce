@@ -20,7 +20,7 @@
                         </ol>
                         <h4>Course Fee:</h4>
                         <ol>
-                            <li>Around <strong>৳ 10,000</strong>(may vary by institution)</li>
+                            <li>Around <strong>৳ 6,000</strong>(may vary by institution)</li>
                         </ol>
                     </div>
                     <!-- Download button -->
@@ -44,7 +44,7 @@
                         </ol>
                         <h4>Course Fee:</h4>
                         <ol>
-                            <li>Around <strong>৳ 10,000</strong>(may vary by institution)</li>
+                            <li>Around <strong>৳ 8,000</strong>(may vary by institution)</li>
                         </ol>
                     </div>
                     <!-- Download button -->

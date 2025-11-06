@@ -9,7 +9,11 @@
 
 </head>
 <body>
-
+    <noscript>
+        <div style="background-color: #ffdddd; padding: 10px; border: 1px solid red; color: red;">
+            ⚠️ আপনার ব্রাউজারে JavaScript চালু নেই। সাইটের সব ফিচার ব্যবহার করতে JavaScript চালু করুন।
+        </div>
+    </noscript>
     @include('frontend.includes.header')
 
     <main>

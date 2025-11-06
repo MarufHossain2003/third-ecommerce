@@ -52,6 +52,9 @@ Route::get('sub-category-product/{slug}',       [HomeController::class, 'subCate
 // search product
 Route::get('/search-products',                  [HomeController::class, 'searchProducts']);
 
+// Student Application
+Route::get('/student-application',              [HomeController::class, 'studentApplication']);
+Route::post('/student-application/submit',     [HomeController::class, 'submitStudentApplication']);
 Auth::routes();
 
 Route::get('/admin/login',                      [AdminController::class, 'login']);

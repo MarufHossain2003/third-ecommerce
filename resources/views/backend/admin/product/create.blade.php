@@ -57,8 +57,6 @@
                                         placeholder="Enter Color">
                                 </div>
                                 <button type="button" class="btn btn-primary" id="add_color">Add More</button>
-                                <button type="button" class="btn btn-danger" id="remove_blank_colors">Remove Blank Fields</button>
-
                                 <div class="form-group" id="size_fields">
                                     <label for="size">Product Size(optional)</label>
                                     <input type="text" name="size[]" class="form-control" id="size"
@@ -182,32 +180,43 @@
         })
     </script>
     <script>
+        // add more color field
         $(document).ready(function() {
-            // Add new color field
             $("#add_color").click(function() {
                 $("#color_fields").append(
-                    '<input type="text" name="color[]" class="form-control mt-2 color-field" placeholder="Enter Color">'
+                    `<div class="input-group mt-3 color-group">
+                    <input type="text" class="form-control" name="color[]" placeholder="Enter Product Color" required>
+                    <div class="input-group-append">
+                        <button type="button" class="btn btn-danger remove-color">Remove</button>
+                    </div>
+                </div>`
                 );
             });
 
-            // Remove blank color fields
-            $("#remove_blank_colors").click(function() {
-                $("#color_fields .color-field").each(function() {
-                    if (!$(this).val().trim()) {
-                        $(this).remove();
-                    }
-                });
+            // Remove color field
+            $("#color_fields").on("click", ".remove-color", function() {
+                $(this).closest('.color-group').remove();
             });
         });
     </script>
-
     <script>
+        // add more size field
         $(document).ready(function() {
             $("#add_size").click(function() {
                 $("#size_fields").append(
-                    '<input type="text" name="size[]" class="form-control mt-2" id="size" placeholder = "Enter Size" > '
-                )
-            })
-        })
+                    `<div class="input-group mt-3 size-group">
+                    <input type="text" class="form-control" name="size[]" placeholder="Enter Product Size" required>
+                    <div class="input-group-append">
+                        <button type="button" class="btn btn-danger remove-size">Remove</button>
+                    </div>
+                </div>`
+                );
+            });
+
+            // Remove size field
+            $("#size_fields").on("click", ".remove-size", function() {
+                $(this).closest('.size-group').remove();
+            });
+        });
     </script>
 @endpush
