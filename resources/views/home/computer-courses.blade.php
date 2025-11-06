@@ -28,7 +28,7 @@
                         <a href="{{ asset('/frontend/assets/file/076-Computer Office Applicaion.pdf') }}" class="btn btn-primary" download>
                                 Download File
                         </a>
-                        <a href="" class="btn btn-success" join>Join Course</a>
+                        <a href="{{url('/applicant-form')}}" class="btn btn-success" join>Join Course</a>
                     </div>
 
                     <div class="computer-courses-content mt-5">
@@ -52,7 +52,7 @@
                         <a href="{{ asset('/frontend/assets/file/081 - Graphics Design & Multimedia Programming.pdf') }}" class="btn btn-primary" download>
                                 Download File
                         </a>
-                        <a href="" class="btn btn-success" join>Join Course</a>
+                        <a href="{{url('/applicant-form')}}" class="btn btn-success" join>Join Course</a>
                     </div>
                 </div>
             </div>

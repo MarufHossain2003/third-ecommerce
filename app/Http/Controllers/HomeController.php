@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Requests\OrderRequest;
+use App\Models\Backend\Applicant;
 use App\Models\Product;
 use App\Models\Cart;
 use App\Models\Category;
@@ -291,5 +292,40 @@ class HomeController extends Controller
         return is_numeric($orderId)
             ? Order::where('id', $orderId)->exists()
             : Order::where('invoiceId', $orderId)->exists();
+    }
+
+    public function applicationForm()
+    {
+        return view ('home.applicant-form');
+    }
+
+    public function submitApplicationForm(Request $request)
+    {
+        $newApplicant = new Applicant();
+        $newApplicant->name = $request->name;
+        $newApplicant->email = $request->email;
+        $newApplicant->phone = $request->phone;
+        $newApplicant->address = $request->address;
+        $newApplicant->course_name = $request->course_name;
+        $newApplicant->save();
+        // $request->validate([
+        //     'name' => 'required|string|max:255',
+        //     'email' => 'required|email|unique:applicants,email',
+        //     'phone' => 'required|string|max:20',
+        //     'address' => 'nullable|string',
+        //     'course_name' => 'nullable|string|max:255',
+        // ]);
+
+        // Create a new applicant record
+        // \App\Models\Applicant::create([
+        //     'name' => $request->name,
+        //     'email' => $request->email,
+        //     'phone' => $request->phone,
+        //     'address' => $request->address,
+        //     'course_name' => $request->course_name,
+        // ]);
+
+        toastr()->success('Application submitted successfully!');
+        return redirect()->back();
     }
 }
