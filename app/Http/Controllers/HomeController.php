@@ -308,23 +308,7 @@ class HomeController extends Controller
         $newApplicant->address = $request->address;
         $newApplicant->course_name = $request->course_name;
         $newApplicant->save();
-        // $request->validate([
-        //     'name' => 'required|string|max:255',
-        //     'email' => 'required|email|unique:applicants,email',
-        //     'phone' => 'required|string|max:20',
-        //     'address' => 'nullable|string',
-        //     'course_name' => 'nullable|string|max:255',
-        // ]);
-
-        // Create a new applicant record
-        // \App\Models\Applicant::create([
-        //     'name' => $request->name,
-        //     'email' => $request->email,
-        //     'phone' => $request->phone,
-        //     'address' => $request->address,
-        //     'course_name' => $request->course_name,
-        // ]);
-
+        
         toastr()->success('Application submitted successfully!');
         return redirect()->back();
     }

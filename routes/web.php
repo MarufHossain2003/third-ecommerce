@@ -8,6 +8,7 @@ use App\Http\Controllers\Backend\SettingController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Backend\SubCategoryController;
+use App\Http\Controllers\StudentController;
 use App\Models\Order;
 
 /*
@@ -53,8 +54,8 @@ Route::get('sub-category-product/{slug}',       [HomeController::class, 'subCate
 Route::get('/search-products',                  [HomeController::class, 'searchProducts']);
 
 // Student Application
-Route::get('/applicant-form',              [HomeController::class, 'applicationForm']);
-Route::post('/applicant-form/submit',      [HomeController::class, 'submitApplicationForm']);
+Route::get('/applicant-form',                   [HomeController::class, 'applicationForm']);
+Route::post('/applicant-form/submit',           [HomeController::class, 'submitApplicationForm']);
 
 
 Auth::routes();
@@ -126,3 +127,6 @@ Route::get('/admin/employee-create',            [AdminController::class, 'employ
 Route::post('/admin/employee-store',            [AdminController::class, 'employeeStore']);
 Route::get('/admin/employee-edit/{id}',         [AdminController::class, 'employeeEdit']);
 Route::post('/admin/employee-update/{id}',      [AdminController::class, 'employeeUpdate']);
+
+// Student Controller
+Route::get('/admin/student/applications/list',           [StudentController::class, 'applicantList']);
