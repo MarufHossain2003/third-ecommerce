@@ -55,24 +55,25 @@
 
                                     </select>
                                 </div>
+                                <div class="form-group">
+                                    <label for="brand">Product Brand</label>
+                                    <input type="number" name="brand" value="{{$product->brand}}" class="form-control" id="brand"
+                                        placeholder="Enter Brand Name">
+                                </div>
                                 <div class="form-group" id="color_fields">
                                     <label for="color">Product Color(optional)</label>
                                     @foreach ($product->color as $name)
                                         <input type="text" name="color[]" value="{{$name->color_name}}" class="form-control mt-2" id="color"
                                         placeholder="Enter Color">
                                     @endforeach
-                                    
                                 </div>
                                 <button type="button" class="btn btn-primary" id="add_color">Add More</button>
-                                <button type="button" class="btn btn-danger" id="remove_blank_colors">Remove Blank Fields</button>
-
                                 <div class="form-group" id="size_fields">
                                     <label for="size">Product Size(optional)</label>
                                     @foreach ($product->size as $name)
                                       <input type="text" name="size[]" value="{{$name->size_name}}" class="form-control mt-2" id="size"
                                         placeholder="Enter Size">  
                                     @endforeach
-                                 
                                 </div>
                                 <button type="button" class="btn btn-primary" id="add_size">Add More</button>
                                 <div class="form-group">
@@ -203,33 +204,44 @@
             });
         })
     </script>
-    <script>
-    $(document).ready(function() {
-        // Add new color field
-        $("#add_color").click(function() {
-            $("#color_fields").append(
-                '<input type="text" name="color[]" class="form-control mt-2 color-field" placeholder="Enter Color">'
-            );
-        });
+       <script>
+        // add more color field
+        $(document).ready(function() {
+            $("#add_color").click(function() {
+                $("#color_fields").append(
+                    `<div class="input-group mt-3 color-group">
+                    <input type="text" class="form-control" name="color[]" placeholder="Enter Product Color">
+                    <div class="input-group-append">
+                        <button type="button" class="btn btn-danger remove-color">Remove</button>
+                    </div>
+                </div>`
+                );
+            });
 
-        // Remove blank color fields
-        $("#remove_blank_colors").click(function() {
-            $("#color_fields .color-field").each(function() {
-                if (!$(this).val().trim()) {
-                    $(this).remove();
-                }
+            // Remove color field
+            $("#color_fields").on("click", ".remove-color", function() {
+                $(this).closest('.color-group').remove();
             });
         });
-    });
-</script>
-
+    </script>
     <script>
+        // add more size field
         $(document).ready(function() {
             $("#add_size").click(function() {
                 $("#size_fields").append(
-                    '<input type="text" name="size[]" class="form-control" id="size" placeholder = "Enter Size" > '
-                )
-            })
-        })
+                    `<div class="input-group mt-3 size-group">
+                    <input type="text" class="form-control" name="size[]" placeholder="Enter Product Size" >
+                    <div class="input-group-append">
+                        <button type="button" class="btn btn-danger remove-size">Remove</button>
+                    </div>
+                </div>`
+                );
+            });
+
+            // Remove size field
+            $("#size_fields").on("click", ".remove-size", function() {
+                $(this).closest('.size-group').remove();
+            });
+        });
     </script>
 @endpush

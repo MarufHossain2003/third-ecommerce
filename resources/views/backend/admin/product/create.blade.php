@@ -51,6 +51,11 @@
 
                                     </select>
                                 </div>
+                                <div class="form-group" id="brand_group">
+                                    <label for="brand">Product Brand(optional)</label>
+                                    <input type="text" name="brand" class="form-control" id="brand"
+                                        placeholder="Enter brand">
+                                </div>
                                 <div class="form-group" id="color_fields">
                                     <label for="color">Product Color(optional)</label>
                                     <input type="text" name="color[]" class="form-control" id="color"

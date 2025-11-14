@@ -179,10 +179,10 @@ class HomeController extends Controller
         $previousOrder = Order::orderBy('id', 'desc')->first(); 
 
         if($previousOrder == null){
-            $order->invoiceId = 'INV-1';
+            $order->invoiceId = 'NMBD-1';
         }
         if($previousOrder != null){
-            $generaeInvoiceId = 'INV-'.$previousOrder->id+1;
+            $generaeInvoiceId = 'NMBD-'.$previousOrder->id+1;
             $order->invoiceId = $generaeInvoiceId;
         }   
         

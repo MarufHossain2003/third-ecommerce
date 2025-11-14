@@ -32,6 +32,11 @@
                                     <h3 class="product-name">
                                         {{ $product->name }}
                                     </h3>
+                                    <div class="product-brand">
+                                        <h3 style="color:rgb(234, 12, 42)">
+                                            Brand: {{ $product->brand }}
+                                        </h3>
+                                    </div>
                                     <div class="product-price">
                                         <span>{{ $product->discount_price }} Tk.</span>
                                         <span class="" style="color: #f74b81;">
@@ -89,7 +94,7 @@
                                     </form>
                                     <button type="button" class="product-details-hot-line">
                                         <i class="fas fa-phone-alt"></i>
-                                        For Call : 0123456854
+                                        For Call : 01716600456
                                     </button>
                                 </div>
                             </div>
@@ -164,8 +169,8 @@
                                 Category
                             </h3>
                             <a href="#" class="category-item-outer">
-                                <img src="{{ asset('frontend/assets/images/product.png') }}" alt="category image">
-                                Test Category
+                                <img src="{{asset('backend/images/category/'.$product->category->image)}}" alt="category image">
+                                {{$product->category->name}}
                             </a>
                         </div>
                     </div>

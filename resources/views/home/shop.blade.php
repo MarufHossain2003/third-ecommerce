@@ -96,7 +96,7 @@
                                     </div>
                                 </div>
                                 <div class="product__item-info-outer">
-                                    <a href="#" class="product__item-name">
+                                    <a href="{{url('product-details/'.$product->slug)}}" class="product__item-name">
                                         {{$product->name}}
                                     </a>
                                     <div class="product__item-price-outer">
@@ -133,7 +133,7 @@
                                     </div>
                                 </div>
                                 <div class="product__item-info-outer">
-                                    <a href="#" class="product__item-name">
+                                    <a href="{{url('product-details/'.$product->slug)}}" class="product__item-name">
                                         {{$product->name}}
                                     </a>
                                     <div class="product__item-price-outer">
@@ -169,7 +169,7 @@
                                     </div>
                                 </div>
                                 <div class="product__item-info-outer">
-                                    <a href="#" class="product__item-name">
+                                    <a href="{{url('product-details/'.$product->slug)}}" class="product__item-name">
                                         {{$product->name}}
                                     </a>
                                     <div class="product__item-price-outer">

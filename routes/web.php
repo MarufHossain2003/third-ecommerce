@@ -9,6 +9,7 @@ use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Backend\SubCategoryController;
 use App\Http\Controllers\StudentController;
+use Illuminate\Support\Facades\Auth;
 use App\Models\Order;
 
 /*
@@ -58,7 +59,7 @@ Route::get('/applicant-form',                   [HomeController::class, 'applica
 Route::post('/applicant-form/submit',           [HomeController::class, 'submitApplicationForm']);
 
 
-Auth::routes();
+Auth::routes(['register' => false]);
 
 Route::get('/admin/login',                      [AdminController::class, 'login']);
 Route::post('/admin/login-access',              [AdminController::class, 'loginCheck']);
